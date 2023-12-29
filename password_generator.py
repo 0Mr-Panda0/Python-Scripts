@@ -3,7 +3,7 @@ from string import ascii_letters, digits, punctuation
 from datetime import datetime
 
 def storing_password(password):
-    with open(".\\resources\passwords.txt",'a+') as note:
+    with open("./resources/passwords.txt",'a+') as note:
         note.write(f"Password:{password} - length of password:{len(password)} - timestamp:{datetime.now()}\n")
 
 if __name__ == "__main__":
