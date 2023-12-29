@@ -109,7 +109,7 @@ if __name__ == "__main__":
     elif type_of_move == 'S':
         file_names = select_files_to_move(source_dir)
 
-    print(f"These are the files which will be removed from {source_dir} to {target_dir}\n")
+    print(f"These are the files which will be moved from \n1. {source_dir} to \n2. {target_dir}\n")
     for i in range(len(file_names)):
         print(f"{i+1}. {file_names[i]}")
     
@@ -118,9 +118,6 @@ if __name__ == "__main__":
         start_time = time.time()
         move_files(source_dir,target_dir,taken_from,taken_to,file_names)
         end_time = time.time()
-
-        title = "Transfer is complete"
-        message = f"Transfer from source to target is completed within {round(end_time-start_time,2)} seconds"
 
     else:
         print("Thank you!!")
